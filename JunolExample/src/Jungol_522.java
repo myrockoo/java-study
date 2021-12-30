@@ -4,6 +4,7 @@ public class Jungol_522 {
 		Scanner sc =new Scanner(System.in);
 		int num1 = sc.nextInt();
 		int num2 = sc.nextInt();
+		sc.close();
 		
 		if (num1 == num2)
 			System.out.println("1");
