@@ -9,7 +9,7 @@ public class Backjoon_4344 {
 		for (int i = 0; i < testcase; i++) {
 			int sum = 0, avg = 0, k = 0;
 			int person = sc.nextInt();
-			int arr[] =new int[person];
+			int arr[] = new int[person];
 			for (int j = 0; j < person; j++) {
 				int grade = sc.nextInt();
 				arr[k] = grade;
@@ -17,15 +17,14 @@ public class Backjoon_4344 {
 				k++;
 			}
 			avg = sum / person;
-			
+
 			int compare = 0;
-			
-			for (int k1 = 0; k1 < person; k1++)
-			{
-				if(arr[k1] > avg)
+
+			for (int k1 = 0; k1 < person; k1++) {
+				if (arr[k1] > avg)
 					compare += 1;
 			}
-			System.out.printf("%.3f%%\n", ((double) compare / (double)person) * 100);
+			System.out.printf("%.3f%%\n", ((double) compare / (double) person) * 100);
 		}
 		sc.close();
 	}
