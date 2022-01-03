@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Jungongol_113 {
+public class Jungol_113 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
