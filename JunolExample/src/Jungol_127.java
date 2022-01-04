@@ -1,21 +1,19 @@
 import java.util.Scanner;
 
-public class Jungol_539 {
+public class Jungol_127 {
 
 	public static void main(String[] args) {
 		int sum = 0, cnt = 0;
-
 		Scanner sc = new Scanner(System.in);
-		while (true) {
+		while(true) {
 			int num = sc.nextInt();
-			sum += num;
-			cnt += 1;
-			if (num >= 100)
+			if (num < 0 || num > 100)
 				break;
+			sum += num;
+			cnt++;
 		}
 		sc.close();
-		System.out.println(sum);
-		System.out.printf("%.1f", (double) sum / cnt);
+		System.out.println("sum : " + sum);
+		System.out.printf("avg : %.1f" ,(double)sum / cnt);			
 	}
-
 }

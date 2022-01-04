@@ -6,8 +6,8 @@ public class Jungol_538 {
 		boolean b = true;
 		Scanner sc = new Scanner(System.in);
 		while (b) {
-			int num = sc.nextInt();
 			System.out.println("number?");
+			int num = sc.nextInt();
 			if (num > 0)
 				System.out.println("positive integer");
 			else if (num < 0)
