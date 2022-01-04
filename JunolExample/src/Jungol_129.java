@@ -17,6 +17,7 @@ public class Jungol_129 {
 			else
 				break;
 		}
+		sc.close();
 	}
 
 }
