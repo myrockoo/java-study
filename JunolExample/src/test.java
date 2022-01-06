@@ -2,24 +2,23 @@ import java.util.Scanner;
 
 public class test {
 	public static void main(String[] args) {
-		int arr[] = new int[100];
-
-//    	(a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c);
-//    	(a < b && a < c) ? a : (b < c) ? b : c;
-//    	(a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c);
-//    	(a < b && a < c) ? a : (b < c) ? b : c;
-
-//    	int min = Integer.MIN_VALUE;
-//    	for(int i = 0; i < arr.length; i++) {
-//    		min = Math.min(min,arr[i]);
-//    		System.out.println(min);
-
-//  min & max ¹æ¹ý  	
-//    	int max = Integer.MAX_VALUE;
-//    			
-//    	for (int i = 0; i < arr.length; i++) {
-//    		if(max > arr[i])
-//    			max = arr[i];    			
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		sc.close();
+		
+		if (num > 1)
+			for (int i = 1; i <= num; i++)
+				System.out.print(i + " ");
+//		else if (num < 0) {
+//			int minus = Math.abs(num);
+//			for(int i = 1; i <= minus + 2; i++) {
+//				System.out.print(2 - i + " ");
+//			}
+//		}
+		else if (num < 1) {
+			for (int i = 1; i >= num; i--) {
+				System.out.println(i + " ");
+			}
+		}
 	}
-
 }
