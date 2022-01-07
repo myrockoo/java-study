@@ -1,24 +1,26 @@
 import java.util.Scanner;
 
 public class test {
+	String name;
+	String school;
+	int grade;
+	
+	public test(String n, String s, int g) {
+		this.school = s;
+		this.grade = g;
+		this.name = n;		
+	}
+	public void print() {
+		System.out.println("Name : " + this.name);
+		System.out.println("School : " + this.school);
+		System.out.println("Grade : " + this.grade);
+	}	
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
+		test id = new test(sc.next(), sc.next(), sc.nextInt());
 		sc.close();
-		
-		if (num > 1)
-			for (int i = 1; i <= num; i++)
-				System.out.print(i + " ");
-//		else if (num < 0) {
-//			int minus = Math.abs(num);
-//			for(int i = 1; i <= minus + 2; i++) {
-//				System.out.print(2 - i + " ");
-//			}
-//		}
-		else if (num < 1) {
-			for (int i = 1; i >= num; i--) {
-				System.out.println(i + " ");
-			}
-		}
+		id.print();
+
 	}
 }
