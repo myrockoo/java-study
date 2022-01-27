@@ -1,26 +1,28 @@
 import java.util.Scanner;
 
 public class test {
-	String name;
-	String school;
-	int grade;
-	
-	public test(String n, String s, int g) {
-		this.school = s;
-		this.grade = g;
-		this.name = n;		
-	}
-	public void print() {
-		System.out.println("Name : " + this.name);
-		System.out.println("School : " + this.school);
-		System.out.println("Grade : " + this.grade);
-	}	
-	
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		test id = new test(sc.next(), sc.next(), sc.nextInt());
-		sc.close();
-		id.print();
+   int num;
 
-	}
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int num = 1;
+
+      for (int i = 1; i <= n; i++) {// 고치지마
+         for (int b = (n - 1); b >= i; b--) {
+            System.out.print(" ");
+            System.out.print(" ");
+         }
+         for (int j = 1; j <= i; j++) {
+//            if (num > 26) {
+//               num = num % 26;
+//            }
+            System.out.print((char) (num % 26 + 65) + " ");
+            num += n - j;
+         }
+         num = i + 1;
+         System.out.println();
+
+      }
+   }
 }
