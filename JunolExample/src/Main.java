@@ -1,22 +1,38 @@
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Main {
-	public static void main(String args[]) {
-		Jungol_615 grade = new Jungol_615();
-		Scanner sc = new Scanner(System.in);
-		for (int i = 0; i < 2; i++) {
-			String name = sc.next();
-			int kor = sc.nextInt();
-			int eng = sc.nextInt();
-			if (i == 0) {
-				grade.setAll_1(name, kor, eng);
-				grade.print_1();
-			} else {
-				grade.setAll_2(name, kor, eng);
-				grade.print_2();
-			}
-		}
-		sc.close();
-		grade.printAvg();
-	}
+   public static void main(String[] args) {
+      TreeSet<Person> treeSet = new TreeSet<Person>();
+      Scanner sc = new Scanner(System.in);
+      for (int i = 0; i < 5; i++) {
+         treeSet.add(new Person(sc.next(), sc.nextInt()));
+      }
+      sc.close();
+      treeSet.first().showInfo();
+   }
+}
+
+class Person implements Comparable<Person> {
+   private String name;
+   private int height;
+
+   public Person(String name, int height) {
+      this.name = name;
+      this.height = height;
+   }
+
+   public void showInfo() {
+      System.out.println(name + " " + height);
+   }
+
+   @Override
+   public int compareTo(Person o) {
+      if (height < o.height)
+         return -1;
+      else if (height == o.height)
+         return 0;
+      else
+         return 1;
+   }
 }
