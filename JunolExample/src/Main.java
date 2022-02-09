@@ -1,38 +1,28 @@
 import java.util.Scanner;
-import java.util.TreeSet;
 
 public class Main {
-   public static void main(String[] args) {
-      TreeSet<Person> treeSet = new TreeSet<Person>();
-      Scanner sc = new Scanner(System.in);
-      for (int i = 0; i < 5; i++) {
-         treeSet.add(new Person(sc.next(), sc.nextInt()));
-      }
-      sc.close();
-      treeSet.first().showInfo();
-   }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		StudentId si = new StudentId("Jejuelementary",6);
+		si.print();
+
+		StudentId si2 = new StudentId(sc.next(), sc.nextInt());
+		sc.close();
+		
+		si2.print();		
+	}
 }
 
-class Person implements Comparable<Person> {
-   private String name;
-   private int height;
+class StudentId {
+	private String school;
+	private int grade;
 
-   public Person(String name, int height) {
-      this.name = name;
-      this.height = height;
-   }
-
-   public void showInfo() {
-      System.out.println(name + " " + height);
-   }
-
-   @Override
-   public int compareTo(Person o) {
-      if (height < o.height)
-         return -1;
-      else if (height == o.height)
-         return 0;
-      else
-         return 1;
-   }
+	public StudentId(String school, int grade) {
+		this.school = school;
+		this.grade = grade;
+	}
+	
+	public void print() {
+		System.out.println(grade + " grade in " + school +" school");
+	}
 }
